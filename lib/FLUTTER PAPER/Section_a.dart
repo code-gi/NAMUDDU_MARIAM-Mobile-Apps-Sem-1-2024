@@ -42,10 +42,11 @@
 // StatefulWidget: Use it when the widget's state will change. For example, when user input is required (like form fields), dynamic lists, animations, or data that updates on a timer.
 
 // Number 1(g)
-int add(int a, int b) {
-  return a + b; 
-}
+import 'package:flutter/foundation.dart';
 
+int sum(int a, int b) {
+  return a + b;
+}
 void main() {
   int result = add(5, 7); 
   print('The sum is: $result'); 
@@ -53,22 +54,31 @@ void main() {
 
 
  // Number 1(h)
- void checkEvenOdd(int number) {
+void checkEvenOrOdd(int number) {
   if (number % 2 == 0) {
-    print('$number is even');
+    print('$number is even.');
   } else {
-    print('$number is odd');
+    print('$number is odd.');
   }
 }
 
-void main() {
-  checkEvenOdd(4); 
-  checkEvenOdd(7); 
-}
-
-
-
    // Number 1(i)
+void main() {
+  checkEvenOdd(5); // Example usage
+}
+ void map() {
+  Map<String, String> names = {
+    'name1': 'Alice',
+    'name2': 'Bob',
+    'name3': 'Charlie'
+  };
+
+  names.forEach((key, value) {
+    if (kDebugMode) {
+      print('$key: $value');
+    }
+  });
+}
 
 
    
